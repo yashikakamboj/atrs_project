@@ -146,7 +146,7 @@ if exist "venv\Scripts\python.exe" (
 :: 3. Package Verification & Auto-Install
 :: ------------------------------------------------------------
 if not defined NEED_INSTALL (
-    venv\Scripts\python.exe -c "import pandas, scipy, sklearn, matplotlib, requests, bs4, anthropic, tabulate" >nul 2>&1
+    venv\Scripts\python.exe -c "import pandas, scipy, sklearn, matplotlib, requests, bs4, fastapi, uvicorn, tabulate" >nul 2>&1
     if !errorlevel! neq 0 (
         echo [3/3] Missing dependencies detected. Auto-installing...
         set "NEED_INSTALL=1"

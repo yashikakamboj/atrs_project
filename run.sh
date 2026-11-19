@@ -50,7 +50,7 @@ fi
 
 # 3. Dependency Verification
 if [ $NEED_INSTALL -eq 0 ]; then
-    if ! ./venv/bin/python -c "import pandas, scipy, sklearn, matplotlib, requests, bs4, anthropic, tabulate" &>/dev/null; then
+    if ! ./venv/bin/python -c "import pandas, scipy, sklearn, matplotlib, requests, bs4, fastapi, uvicorn, tabulate" &>/dev/null; then
         echo "[3/3] Missing dependencies detected. Auto-installing..."
         NEED_INSTALL=1
     fi

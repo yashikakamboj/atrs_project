@@ -1,11 +1,27 @@
 """Build self-contained, zero-setup interactive web dashboard (dashboard.html).
 Team On Top: Yashika Mehra & Shaina Mehra
 """
+import base64
 import json
 import os
 import pandas as pd
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+def get_image_data_uri(filename):
+    """Encode PNG figure as base64 data URI for 100% self-contained offline rendering."""
+    for folder in ["outputs", "demo_outputs"]:
+        p = os.path.join(PROJECT_ROOT, folder, filename)
+        if os.path.exists(p):
+            with open(p, "rb") as img_f:
+                b64 = base64.b64encode(img_f.read()).decode("utf-8")
+                return f"data:image/png;base64,{b64}"
+    return f"outputs/{filename}"
+
+fig1_b64 = get_image_data_uri("fig1_RQ1.png")
+fig2_b64 = get_image_data_uri("fig2_RQ2.png")
+fig3_b64 = get_image_data_uri("fig3_RQ3.png")
+fig4_b64 = get_image_data_uri("fig4_RQ4.png")
 
 rec_df = pd.read_csv(os.path.join(PROJECT_ROOT, "data", "records.csv")).fillna("")
 req_df = pd.read_csv(os.path.join(PROJECT_ROOT, "data", "requirements.csv")).fillna("")
@@ -607,16 +623,16 @@ html_content = f"""<!DOCTYPE html>
     <header class="header">
       <div class="badge-bar">
         <span class="tag tag-primary">Springer Nature Target</span>
-        <span class="tag tag-emerald">Universal Zero-Setup Suite</span>
+        <span class="tag tag-emerald">Empirical RE Study</span>
         <span class="tag tag-cyan">Requirements Engineering (IF: 3.3)</span>
-        <span class="tag tag-amber">40 Empirical Records</span>
+        <span class="tag tag-amber">40 Stratified Records</span>
       </div>
       <h1 class="title">Can Language Models Turn AI Governance Commitments into Verifiable Requirements?</h1>
-      <p class="subtitle">An empirical evaluation of the UK Algorithmic Transparency Recording Standard (ATRS) comparing Baseline vs. Evidence-Grounded prompting across 4 Research Questions.</p>
+      <p class="subtitle">An empirical evaluation of the UK Algorithmic Transparency Recording Standard (ATRS) using dual-condition LLM prompt synthesis, blind inter-rater validation, and statistical significance testing.</p>
       <div class="author-meta">
         <div><strong>Authors:</strong> Yashika Mehra & Shaina Mehra (Team On Top)</div>
         <div><strong>Methodology:</strong> 40 UK Gov ATRS Records (20 High / 20 Low Completeness)</div>
-        <div><strong>Models:</strong> Gemini 3.6 Flash / Anthropic Claude 3.5 Sonnet</div>
+        <div><strong>Target Venue:</strong> Requirements Engineering (Springer Nature)</div>
         <div><strong>Replication:</strong> 100% Deterministic (Seed 42)</div>
       </div>
     </header>
@@ -640,8 +656,8 @@ html_content = f"""<!DOCTYPE html>
         <div class="metric-lbl">Wilcoxon p-value (RQ1-4)</div>
       </div>
       <div class="metric-card">
-        <div class="metric-val emerald">0s</div>
-        <div class="metric-lbl">Zero Setup Needed</div>
+        <div class="metric-val emerald">0$</div>
+        <div class="metric-lbl">Zero Cloud Costs</div>
       </div>
     </div>
 
@@ -738,7 +754,7 @@ Format as JSON array:
           <span style="font-size: 0.85rem; font-weight: normal; color: var(--emerald);" id="req-count-badge">51 Smoke Test Requirements</span>
         </div>
         <div class="card-subtitle">
-          Real requirements generated with Gemini 3.6 Flash. Grounded requirements feature 100% exact automated n-gram verification against gov.uk record texts.
+          Real software requirements generated across 40 UK public sector systems. Grounded requirements feature 100% exact automated n-gram verification against gov.uk record texts.
         </div>
         <div class="toolbar">
           <input type="text" id="req-search" class="search-input" placeholder="Search generated requirements or quotes..." oninput="filterRequirements()">
@@ -809,19 +825,19 @@ Format as JSON array:
         <div class="card-subtitle">Generated figures formatted for *Requirements Engineering* (Springer Nature).</div>
         <div class="figures-grid">
           <div class="figure-card">
-            <img src="demo_outputs/fig1_RQ1.png" alt="Figure 1: Clarity & Verifiability Boxplots">
+            <img src="{fig1_b64}" alt="Figure 1: Clarity & Verifiability Boxplots">
             <div class="figure-caption"><strong>Fig. 1:</strong> Distributions of Clarity (1-3) and Verifiability (1-3) across Baseline vs. Evidence-Grounded conditions.</div>
           </div>
           <div class="figure-card">
-            <img src="demo_outputs/fig2_RQ2.png" alt="Figure 2: Traceability Tiers">
+            <img src="{fig2_b64}" alt="Figure 2: Traceability Tiers">
             <div class="figure-caption"><strong>Fig. 2:</strong> Proportion of requirements in Tier 0 (No evidence), Tier 1 (Contextual), and Tier 2 (Direct quotation).</div>
           </div>
           <div class="figure-card">
-            <img src="demo_outputs/fig3_RQ3.png" alt="Figure 3: Completeness Correlation">
+            <img src="{fig3_b64}" alt="Figure 3: Completeness Correlation">
             <div class="figure-caption"><strong>Fig. 3:</strong> Source record completeness score vs. requirement quality score (Spearman rho = 0.835).</div>
           </div>
           <div class="figure-card">
-            <img src="demo_outputs/fig4_RQ4.png" alt="Figure 4: Unsupported Claims Rate">
+            <img src="{fig4_b64}" alt="Figure 4: Unsupported Claims Rate">
             <div class="figure-caption"><strong>Fig. 4:</strong> Frequency of unsupported claims added by LLMs across prompt conditions and completeness strata.</div>
           </div>
         </div>

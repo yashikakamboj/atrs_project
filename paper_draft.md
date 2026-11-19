@@ -1,7 +1,7 @@
 # Can Language Models Turn AI Governance Commitments into Verifiable Requirements? Evidence from UK Algorithmic Transparency Records
 
 **Team Name:** On Top | **Project 19:** Traceable ethical requirements  
-**Authors:** Yashika Mehra, Shaina Mehra  
+**Authors:** Yashika, Shaina Mehra  
 **Target Journal:** *Requirements Engineering* (Springer Nature) | **Impact Factor:** 3.3 (2025 JIF)  
 **Keywords:** Requirements Engineering, Large Language Models, AI Governance, Algorithmic Transparency, Empirical Software Engineering, Traceability, Hallucination.
 

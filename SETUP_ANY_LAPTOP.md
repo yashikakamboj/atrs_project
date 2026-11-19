@@ -93,8 +93,8 @@ This tool checks:
 3. Primary dataset (`data/atrs_records.csv`, 136 records)
 4. Scraped full-text corpus (`data/texts/`, 70 documents)
 5. 40 stratified study records (`data/records.csv`)
-6. Active Google Gemini / Anthropic API credentials
-7. Output folders and scripts
+6. Local AI Architecture (FastAPI + Ollama with Qwen 2.5 / Llama 3.2 / Mistral / Gemma 2; zero cloud keys required)
+7. Output folders, scripts, and pre-computed statistical tables
 
 ---
 

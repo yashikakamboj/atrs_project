@@ -36,8 +36,11 @@ This project is engineered to work out-of-the-box on **any laptop without manual
 
 ```
 atrs_project/
-├── config.py                           # Central configuration (seeds, sample sizes, thresholds, model settings)
-├── requirements.txt                    # Project dependencies (pandas, scipy, scikit-learn, matplotlib, etc.)
+├── config.py                           # Central configuration (model, seed, sample sizes, endpoints)
+├── server.py                           # FastAPI Local AI Backend (routes to Ollama: Qwen, Llama, Mistral, Gemma)
+├── dashboard.html                      # Interactive research dashboard (HTML5, Vanilla CSS3 & JS, zero npm build)
+├── build_dashboard.py                  # Standalone generator bundling all dataset tables & figures into dashboard
+├── requirements.txt                    # Project dependencies (FastAPI, uvicorn, pandas, scipy, matplotlib, etc.)
 ├── README.md                           # Comprehensive pipeline documentation and run order
 ├── rubric.md                           # 4-dimensional annotation rubric and calibration protocol
 ├── paper_draft.md                      # Complete manuscript skeleton formatted for Requirements Engineering
@@ -47,14 +50,14 @@ atrs_project/
 │   └── grounded.txt                    # Evidence-grounded prompt (shall-statements + verbatim quotes)
 │
 ├── scripts/                            # Self-contained executable pipeline scripts
-│   ├── llm.py                          # Unified Anthropic SDK interface with token usage logging
+│   ├── llm.py                          # Unified Local AI interface (FastAPI + Ollama engine)
 │   ├── 01_select_records.py            # Step 1: Detect columns, sample candidates, assign IDs R001...
 │   ├── 02_fetch_texts.py               # Step 2: Download gov.uk pages, clean HTML, polite 1s delay
 │   ├── 03_completeness.py              # Step 3: Compute completeness scores, median split, sample 40
-│   ├── 04_generate.py                  # Step 4: Run LLM generations, JSON cache, quote verification
+│   ├── 04_generate.py                  # Step 4: Run local LLM generations, JSON cache, quote verification
 │   ├── 05_make_annotation_sheets.py    # Step 5: Generate blind evaluation sheets and secret key
 │   ├── 06_analyze.py                   # Step 6: Cohen's kappa, Wilcoxon paired tests, 4 CSVs, 4 PNGs
-│   └── make_demo_data.py               # Synthetic test generator to validate Steps 5-6 without API/internet
+│   └── make_demo_data.py               # Synthetic test generator to validate Steps 5-6 offline
 │
 ├── data/                               # Data artifacts (created by pipeline scripts)
 │   ├── candidates.csv                  # Sampled candidate records with download statuses
