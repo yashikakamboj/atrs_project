@@ -1,0 +1,6 @@
+condition,traceability,n,pct_within_condition
+baseline,0,121,24.59349593495935
+baseline,1,320,65.04065040650407
+baseline,2,51,10.365853658536585
+grounded,1,142,31.208791208791208
+grounded,2,313,68.79120879120879

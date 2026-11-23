@@ -1,0 +1,5 @@
+metric,n_double_rated,kappa,raters
+clarity,158,0.9167274791210573,A vs B
+verifiability,158,0.9161427288315506,A vs B
+traceability,158,0.938275222189667,A vs B
+unsupported,158,0.7065275075181319,A vs B

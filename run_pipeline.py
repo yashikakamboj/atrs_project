@@ -178,7 +178,7 @@ def interactive_menu():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="ATRS Pipeline Runner")
-    parser.add_argument("--demo", action="store_true", help="Run 100% offline synthetic demo test")
+    parser.add_argument("--demo", action="store_true", help="Run 100%% offline synthetic demo test")
     parser.add_argument("--live", action="store_true", help="Run live pipeline (Steps 1 to 4)")
     parser.add_argument("--sheets", action="store_true", help="Run Step 5 (Blind sheets)")
     parser.add_argument("--analyze", action="store_true", help="Run Step 6 (Analysis)")
