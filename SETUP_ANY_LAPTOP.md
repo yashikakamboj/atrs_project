@@ -74,7 +74,7 @@ docker compose up
 
 For running in the cloud with zero local disk space or software installation:
 1. Open [Google Colab](https://colab.research.google.com/).
-2. Upload `atrs_replication_notebook.ipynb`.
+2. Upload `ATRS_Reproducible_Reanalysis_Notebook.ipynb`.
 3. Click **Runtime → Run all**.
 - Runs in Google's cloud on free compute.
 - Renders publication figures and tables directly in your browser.

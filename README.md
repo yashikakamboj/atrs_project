@@ -26,7 +26,7 @@ This project is engineered to work out-of-the-box on **any laptop without manual
 - **macOS / Linux Laptops (1-Liner):** Run `./run.sh` in Terminal.
 - **Web Browser (Zero Install, No Python needed):** Double-click [dashboard.html](file:///c:/Users/HP/Downloads/atrs_project/dashboard.html). Opens our rich interactive research dashboard offline in Chrome, Edge, Safari, or Firefox.
 - **Universal Container (Docker):** Run `docker compose up` for an identical isolated environment.
-- **Cloud Execution (Google Colab):** Open [atrs_replication_notebook.ipynb](file:///c:/Users/HP/Downloads/atrs_project/atrs_replication_notebook.ipynb) in Google Colab for instant cloud execution.
+- **Cloud Execution (Google Colab):** Open [ATRS_Reproducible_Reanalysis_Notebook.ipynb](ATRS_Reproducible_Reanalysis_Notebook.ipynb) in Google Colab for instant cloud execution.
 - **Diagnostic Audit:** Run `python verify_environment.py` to audit your laptop's environment in 1 second.
 - See detailed instructions in [SETUP_ANY_LAPTOP.md](file:///c:/Users/HP/Downloads/atrs_project/SETUP_ANY_LAPTOP.md).
 
