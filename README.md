@@ -9,6 +9,7 @@ An end-to-end, reproducible empirical software engineering research pipeline des
 - **Title:** *Can language models turn AI governance commitments into verifiable requirements?*
 - **Target Journal:** *Requirements Engineering* (Springer)
 - **Goal:** Sample 30–50 UK ATRS records, generate software requirements under Baseline and Evidence-Grounded conditions, and statistically evaluate requirement quality, traceability, and hallucination rates.
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24461655.svg)](https://doi.org/10.5281/zenodo.24461655)
 
 ### Research Questions
 - **RQ1 (Clarity & Testability):** Does evidence-grounded prompting yield significantly higher clarity and verifiability scores than ungrounded baseline generation?
