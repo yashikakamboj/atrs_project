@@ -1,0 +1,8 @@
+{
+  "empirical_publication_ready": false,
+  "reason": "Simulated annotations and template-derived requirements; independent provenance required",
+  "annotation_A_exact_reproduction": 789,
+  "annotation_B_exact_reproduction": 158,
+  "template_prefix_matches": 740,
+  "rubric_contradictions": 53
+}

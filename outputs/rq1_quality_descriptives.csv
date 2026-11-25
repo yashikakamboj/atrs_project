@@ -1,5 +1,5 @@
-metric,condition,n_ratings,mean,sd,median,q1,q3
-clarity,baseline,492,1.9451219512195121,0.692582599547065,2.0,1.0,2.0
-clarity,grounded,455,2.5076923076923077,0.5092169788495152,3.0,2.0,3.0
-verifiability,baseline,492,1.8272357723577235,0.663747063464274,2.0,1.0,2.0
-verifiability,grounded,455,2.5054945054945055,0.5092454981564898,3.0,2.0,3.0
+,clarity,clarity,clarity,clarity,verifiability,verifiability,verifiability,verifiability
+,count,mean,std,median,count,mean,std,median
+condition,,,,,,,,
+baseline,400,1.945,0.6805386337895889,2.0,400,1.84875,0.6727778329666698,2.0
+grounded,389,2.512853470437018,0.5024058937572261,3.0,389,2.4961439588688945,0.5019144173215341,2.5
