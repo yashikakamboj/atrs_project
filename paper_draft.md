@@ -148,7 +148,7 @@ Evidence-grounded prompting significantly increased requirement clarity and veri
 | **Clarity** | 1.95 (0.24) | 2.51 (0.19) | +0.60 | $< 0.001$ | 1.00 |
 | **Verifiability** | 1.85 (0.21) | 2.50 (0.14) | +0.65 | $< 0.001$ | 1.00 |
 
-*Figure 1:* Bar chart comparing mean clarity and verifiability scores between Baseline and Grounded prompting conditions (see `outputs/fig1_RQ1.png`).
+*Figure 1:* Boxplot comparing clarity and verifiability score distributions between Baseline and Grounded prompting conditions (see `outputs/fig1_RQ1.pdf`).
 
 ### 4.3 RQ2: Traceability and Evidence Verification
 
@@ -162,7 +162,7 @@ Baseline prompting frequently yielded detached or aspirational requirements (26.
 
 Automated n-gram verification of grounded evidence quotes confirmed 100% fidelity: **100.0% exact match** against the official `gov.uk` records.
 
-*Figure 2:* 100% stacked bar chart showing the distribution of None, Partial, and Full traceability (see `outputs/fig2_RQ2.png`).
+*Figure 2:* 100% stacked bar chart showing the distribution of None, Partial, and Full traceability (see `outputs/fig2_RQ2.pdf`).
 
 ### 4.4 RQ3: Completeness vs. Requirement Quality
 
@@ -174,7 +174,7 @@ Source record completeness moderated generated requirement quality, with grounde
 | **Baseline** | 0.571 | 0.554 | 0.250 | 0.143 | 0.379 |
 | **Grounded** | 0.837 | 0.840 | 0.757 | 0.003 | 0.986 |
 
-*Figure 3:* Scatter plot with linear regression trends showing record completeness versus composite requirement quality (see `outputs/fig3_RQ3.png`).
+*Figure 3:* Scatter plot showing record completeness versus requirement verifiability (see `outputs/fig3_RQ3.pdf`).
 
 ### 4.5 RQ4: Unsupported and Hallucinated Claims
 
@@ -186,7 +186,7 @@ Baseline prompting led to high rates of unsupported claims (48.1%), where the mo
 | **Baseline** | 48.1% | 40.0% | 56.2% | — |
 | **Grounded** | 11.1% | 10.0% | 12.2% | $< 0.001$ |
 
-*Figure 4:* Grouped bar chart comparing unsupported claim rates across completeness cohorts (see `outputs/fig4_RQ4.png`).
+*Figure 4:* Grouped bar chart comparing unsupported claim rates across completeness cohorts (see `outputs/fig4_RQ4.pdf`).
 
 #### Qualitative Failure Analysis
 Examining unsupported baseline requirements revealed three recurring hallucination archetypes:

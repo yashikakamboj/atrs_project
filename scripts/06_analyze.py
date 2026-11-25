@@ -17,10 +17,10 @@ Outputs:
     table4_RQ4_unsupported.csv
     item_scores.csv
 - Figures:
-    fig1_RQ1.png
-    fig2_RQ2.png
-    fig3_RQ3.png
-    fig4_RQ4.png
+    fig1_RQ1.pdf
+    fig2_RQ2.pdf
+    fig3_RQ3.pdf
+    fig4_RQ4.pdf
 - Summary:
     results_summary.md
 """
@@ -345,7 +345,7 @@ def analyze(data_dir: str = config.DATA_DIR, out_dir: str = config.OUT_DIR):
     ax.set_title("Fig 1 (RQ1): Clarity and Verifiability by Prompt Condition", fontweight="bold", pad=12)
     ax.legend(frameon=True, facecolor="white", edgecolor="#cccccc")
     plt.tight_layout()
-    plt.savefig(os.path.join(out_dir, "fig1_RQ1.png"), dpi=300)
+    plt.savefig(os.path.join(out_dir, "fig1_RQ1.pdf"), bbox_inches="tight")
     plt.close()
 
     # --- Fig 2: RQ2 Traceability to Source Evidence ---
@@ -374,7 +374,7 @@ def analyze(data_dir: str = config.DATA_DIR, out_dir: str = config.OUT_DIR):
     ax.set_title("Fig 2 (RQ2): Traceability to Source Evidence", fontweight="bold", pad=12)
     ax.legend(frameon=True, facecolor="white", edgecolor="#cccccc", loc="lower right")
     plt.tight_layout()
-    plt.savefig(os.path.join(out_dir, "fig2_RQ2.png"), dpi=300)
+    plt.savefig(os.path.join(out_dir, "fig2_RQ2.pdf"), bbox_inches="tight")
     plt.close()
 
     # --- Fig 3: RQ3 Completeness vs Composite Quality ---
@@ -401,7 +401,7 @@ def analyze(data_dir: str = config.DATA_DIR, out_dir: str = config.OUT_DIR):
     ax.set_title("Fig 3 (RQ3): Record Completeness vs Requirement Quality", fontweight="bold", pad=12)
     ax.legend(frameon=True, facecolor="white", edgecolor="#cccccc", loc="lower right", fontsize=8)
     plt.tight_layout()
-    plt.savefig(os.path.join(out_dir, "fig3_RQ3.png"), dpi=300)
+    plt.savefig(os.path.join(out_dir, "fig3_RQ3.pdf"), bbox_inches="tight")
     plt.close()
 
     # --- Fig 4: RQ4 Unsupported Claims by Completeness Level ---
@@ -433,7 +433,7 @@ def analyze(data_dir: str = config.DATA_DIR, out_dir: str = config.OUT_DIR):
     ax.set_title("Fig 4 (RQ4): Hallucinated / Unsupported Claims by Record Completeness", fontweight="bold", pad=12)
     ax.legend(frameon=True, facecolor="white", edgecolor="#cccccc")
     plt.tight_layout()
-    plt.savefig(os.path.join(out_dir, "fig4_RQ4.png"), dpi=300)
+    plt.savefig(os.path.join(out_dir, "fig4_RQ4.pdf"), bbox_inches="tight")
     plt.close()
 
     # Append markdown tables to results_summary.md
@@ -461,13 +461,13 @@ def analyze(data_dir: str = config.DATA_DIR, out_dir: str = config.OUT_DIR):
     print("ANALYSIS COMPLETE")
     print("=" * 60)
     print(f"Tables saved to CSV in: {out_dir}")
-    print(f"Figures saved to PNG (300 DPI) in: {out_dir}")
+    print(f"Figures saved to PDF in: {out_dir}")
     print(f"Results summary written to: {summary_path}")
     print("\n" + "\n".join(summary_lines))
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Step 6: Statistical analysis, CSV tables, and PNG figures.")
+    parser = argparse.ArgumentParser(description="Step 6: Statistical analysis, CSV tables, and PDF figures.")
     parser.add_argument(
         "--data",
         default=config.DATA_DIR,

@@ -79,10 +79,10 @@ atrs_project/
     ├── table3_RQ3_completeness.csv
     ├── table4_RQ4_unsupported.csv
     ├── item_scores.csv
-    ├── fig1_RQ1.png                    # 300 DPI bar chart with SD error bars
-    ├── fig2_RQ2.png                    # 300 DPI 100% stacked bar chart (Traceability tiers)
-    ├── fig3_RQ3.png                    # 300 DPI scatter plot with regression trendlines
-    ├── fig4_RQ4.png                    # 300 DPI grouped bar chart (Hallucinations by completeness)
+    ├── fig1_RQ1.pdf                    # Vector PDF figure (Clarity & verifiability boxplots)
+    ├── fig2_RQ2.pdf                    # Vector PDF figure (Traceability tiers stacked chart)
+    ├── fig3_RQ3.pdf                    # Vector PDF figure (Completeness vs verifiability scatter)
+    ├── fig4_RQ4.pdf                    # Vector PDF figure (Unsupported claims rate)
     └── results_summary.md              # Markdown empirical report
 ```
 
@@ -199,7 +199,7 @@ python scripts/06_analyze.py
 - Paired Wilcoxon signed-rank tests per record with matched-pairs rank-biserial effect sizes ($r_{rb}$).
 - Mann-Whitney $U$ test and Spearman correlation ($\rho$) for completeness effects.
 - Exports 4 publication-ready CSV tables: `table1_RQ1` through `table4_RQ4`.
-- Exports 4 publication-ready 300 DPI figures: `fig1_RQ1.png` through `fig4_RQ4.png`.
+- Exports 4 publication-ready vector PDF figures: `fig1_RQ1.pdf` through `fig4_RQ4.pdf`.
 - Produces comprehensive report in `outputs/results_summary.md`.
 
 ---
